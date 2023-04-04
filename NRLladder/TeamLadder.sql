@@ -12,6 +12,6 @@
     [For] INT NULL, 
     [Against] INT NULL, 
     [Diff] INT NULL, 
-    CONSTRAINT [LadderID] FOREIGN KEY ([ladderID]) REFERENCES [Ladder]([LadderID]), 
+    CONSTRAINT [LadderID] FOREIGN KEY ([LadderID]) REFERENCES [Ladder]([LadderID]), 
     CONSTRAINT [TeamID] FOREIGN KEY ([TeamID]) REFERENCES [Team]([TeamID]) 
 )
