@@ -57,4 +57,15 @@
   <ItemGroup>
     <Folder Include="Properties" />
   </ItemGroup>
+  <ItemGroup>
+    <Build Include="Player.sql" />
+    <Build Include="Team.sql" />
+    <Build Include="Ladder.sql" />
+    <Build Include="TeamStats.sql" />
+    <Build Include="TeamLadder.sql" />
+    <Build Include="PlayerStats.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="NRLladder.refactorlog" />
+  </ItemGroup>
 </Project>
