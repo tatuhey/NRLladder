@@ -1,5 +1,7 @@
 ﻿CREATE TABLE [dbo].[PlayerStats]
 (
+    [PlayerStatsID] INT NOT NULL,
+    [SeasonID] INT NOT NULL,
 	[PlayerID] INT NOT NULL, 
     [TeamID] INT NOT NULL, 
     [LadderID] INT NOT NULL, 
@@ -23,7 +25,9 @@
     [AveragePoints] FLOAT NULL,  
     CONSTRAINT [PlayerID3] FOREIGN KEY ([PlayerID]) REFERENCES [Player]([PlayerID]),
     CONSTRAINT [TeamID3] FOREIGN KEY ([TeamID]) REFERENCES [Team]([TeamID]), 
-    CONSTRAINT [LadderID3] FOREIGN KEY ([LadderID]) REFERENCES [Ladder]([LadderID]) 
+    CONSTRAINT [LadderID3] FOREIGN KEY ([LadderID]) REFERENCES [Ladder]([LadderID]), 
+    CONSTRAINT [PK_PlayerStats] PRIMARY KEY ([PlayerStatsID]), 
+    CONSTRAINT [SeasonID3] FOREIGN KEY ([SeasonID]) REFERENCES [Season]([SeasonID]) 
 )
 
 

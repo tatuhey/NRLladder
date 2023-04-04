@@ -1,0 +1,26 @@
+﻿CREATE TABLE [dbo].[Season]
+(
+    [SeasonID] INT NOT NULL,
+	[LadderID] INT NOT NULL, 
+    [TeamID] INT NOT NULL, 
+    [TeamName] VARCHAR(50) NULL,
+    [Played] INT NULL, 
+    [Points] INT NULL, 
+    [Wins] INT NULL, 
+    [Drawn] INT NULL, 
+    [Lost] INT NULL, 
+    [Byes] INT NULL, 
+    [For] INT NULL, 
+    [Against] INT NULL, 
+    [Diff] INT NULL, 
+    [PointsScored] INT NULL, 
+    [PointsConceded] INT NULL, 
+    [CompletionRate] INT NULL, 
+    [TackleEfficiency] INT NULL, 
+    [AveragePointsScored] FLOAT NULL, 
+    [AveragePointsConceded] FLOAT NULL, 
+    [AveragePlayBallSpeed] FLOAT NULL, 
+    CONSTRAINT [LadderID] FOREIGN KEY ([LadderID]) REFERENCES [Ladder]([LadderID]), 
+    CONSTRAINT [TeamID] FOREIGN KEY ([TeamID]) REFERENCES [Team]([TeamID]), 
+    CONSTRAINT [PK_Season] PRIMARY KEY ([SeasonID]) 
+)
